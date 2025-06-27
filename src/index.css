@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@theme {
+  /*=========== Colors =========== */
+  --color-document: #f3f3f3;
+  --color-green: #509e2f;
+  --color-greenDark: #448828;
+  --color-lightOrange: #fcac1f;
+  --color-lightRed: #f6784c;
+  --color-lightBlue: #e7fafe;
+
+  /*=========== Fonts by Google =========== */
+  --font-primary: "Inter", sans-serif;
+  --font-secondary: "Edu QLD Hand", cursive;
+
+  /*=========== Breakpoints =========== */
+  --breakpoint-xs: 350px;
+}
+
+body {
+  @apply bg-document font-primary text-black overflow-x-hidden;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+img {
+  @apply max-w-full h-auto;
+}
+
+#play-btn {
+  animation: pulseOpacity 2s infinite;
+}
+
+/*=========== Categories Scrollbar =========== */
+.scrollbar-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/*=========== Animations =========== */
+@keyframes pulseOpacity {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+
+  100% {
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+  }
+}
